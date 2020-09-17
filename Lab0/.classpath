@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/zklimanova/Desktop/ECSE 211 2/Lab0/Lab0/controllers/Lab0/lib/simlejos.jar"/>
+	<classpathentry kind="lib" path="/Applications/Webots.app/lib/controller/java/Controller.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

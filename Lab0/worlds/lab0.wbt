@@ -1,0 +1,81 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 16
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      material1 "DPM-Tile"
+      material2 "Rubber"
+      coulombFriction [
+        1000
+      ]
+      bounce 0.1
+      softCFM 0.0001
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.20748884667071474 0.9387769041557388 0.2750387295109966 1.9091603380214666
+  position 1.3353066419342623 0.39088907070700313 0.08885331691695939
+}
+DPM-Floor {
+  dimension 4 3
+  wallHeight 0.2
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DPM-Robot {
+  hidden linearVelocity_0 -0.011855221491721806 6.463161463821868e-05 -0.10925839119439455
+  hidden angularVelocity_0 -0.0016191828566956966 0.0021600815277921796 0.00012997964429712396
+  hidden position_1_0 -25.90245460592409
+  hidden translation_2 4.5409425424525196e-05 2.0244899649302095e-05 1.6534339692453326e-05
+  hidden rotation_2 -0.7239021528849141 0.5077228317068777 -0.4671008447992104 -0.3575694712832293
+  hidden translation_4 0 -0.00512041403178446 0
+  hidden rotation_6 1 0 0 0.168990751474389
+  hidden rotation_9 0.9999999999999999 0 0 0.6478118272298611
+  name "fred"
+  translation 0.5164935529679576 0.06434640676558345 0.2858582845339203
+  rotation 0.9966788098878765 -0.06015511552824325 -0.054888177199372515 -1.4817895470124276
+  children [
+    BallCaster {
+      translation 0 -0.04 -0.05
+    }
+    EV3-Touch {
+      name "S2"
+      translation -0.06 0.096 0.01
+      rotation -0.7071072811850306 2.0863908296645856e-06 0.7071062811846329 3.14159
+      position 4.333744039082334e-05
+    }
+    EV3-LargeMotor {
+      name "A"
+      translation -0.055 0.022 -0.034
+      position 288.1865213508816
+      children [
+        Wheel {
+          translation -0.021 0 0
+          rotation 0 0 1 1.57
+        }
+      ]
+    }
+    EV3-LargeMotor {
+      name "D"
+      translation 0.055 0.022 -0.034
+      rotation 0 1 0 0
+      position 287.26850860204763
+      children [
+        Wheel {
+          translation 0.021 0 0
+          rotation 0 0 1 1.57
+        }
+      ]
+    }
+    robot0_base_assembly-solid {
+      translation 0 0.0315 -0.022
+    }
+    EV3 {
+    }
+  ]
+  controller "Lab0"
+}
