@@ -1,0 +1,86 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 16
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      material1 "DPM-Tile"
+      material2 "Rubber"
+      coulombFriction [
+        1000
+      ]
+      bounce 0.1
+      softCFM 0.0001
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.5763222595809712 -0.5702750200984481 -0.5853537858109388 2.112379785225745
+  position 0.6584913635620471 2.5550666241522175 0.6158878064017483
+}
+DPM-Floor {
+  dimension 4 4
+  wallHeight 0.3
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DPM-Robot {
+  hidden translation_5 3.624140100233486e-05 -1.0396271619805818e-05 8.92278978550029e-05
+  hidden rotation_5 -0.9999999999926147 -2.27385104593258e-06 -3.0984394080467936e-06 2.9002181874572797
+  hidden translation_8 3.6223642370492026e-05 9.473481089811172e-05 6.589619085081017e-05
+  hidden rotation_8 -0.9999999999843104 -3.6826231035535735e-06 -4.221053931591878e-06 2.9001040429142657
+  hidden position_10_0 -2.4321962494695812
+  hidden translation_11 -3.350193994555717e-06 0.0001147073174485036 -5.73381994306817e-05
+  hidden rotation_11 0.9828514300899103 0.1838249523154013 0.014541433095076618 2.839284334658764
+  translation 0.172821 0.0622383 0.202772
+  rotation -0.011685200480472063 0.9999060411141356 0.0071669402946902445 -1.6236853071795858
+  children [
+    US_base_assembly-solid {
+      translation -0.0545 0.02 -0.0603
+      rotation -0.9999999999999999 0 0 1.5707953071795862
+    }
+    EV3-Ultrasonic {
+      name "S1"
+      translation -0.055 0.035 -0.092
+      rotation -0.28108491207243697 -0.6785977877244662 -0.6785987877241534 2.59357
+    }
+    EV3-LargeMotor {
+      name "A"
+      translation -0.0556 -0.025 -0.0219
+      rotation 1 0 0 -1.5707953071795862
+      position 15.470607063933219
+      children [
+        Wheel {
+          translation -0.021 0 0
+          rotation 0 0 1 -1.592894744620203
+        }
+      ]
+    }
+    EV3-LargeMotor {
+      name "D"
+      translation 0.0557 -0.0255 -0.0216
+      rotation -0.9999999999999999 0 0 1.5707953071795862
+      position 15.470493501772657
+      children [
+        Wheel {
+          translation 0.021 0 0
+          rotation 0 0 1 -1.592894744620203
+        }
+      ]
+    }
+    BallCaster {
+      translation 0 -0.0495 0.04
+      rotation 1 0 0 -1.5707953071795862
+    }
+    robot1_base_assembly-solid {
+      translation 5e-05 -0.0135 -0.008
+      rotation 0.9999999999967584 1.881169999993902e-06 1.7160199999944374e-06 -1.5707953071795862
+    }
+    EV3 {
+      rotation 1 0 0 -1.5708
+    }
+  ]
+  controller "Lab1"
+}
