@@ -126,11 +126,11 @@ public class Odometer implements Runnable {
     double distR = Math.PI * WHEEL_RAD * (curr[RIGHT] - prev[RIGHT]) / 180.0;
 //    prevTacho[LEFT] = (int) distL; 
 //    prevTacho[RIGHT] = (int) distR;
-    dtheta = (distL - distR) / BASE_WIDTH; // computes change in heading
-    theta += dtheta;
+    dtheta = (distL - distR) / BASE_WIDTH; // computes change in heading in radians
+//    theta += dtheta; // in degrees 
     // (distL + distR) * 0.5 computes vehicle displacement
-    dx = ((distL + distR) * 0.5) * Math.sin(theta); // compute X component of vehicle displacement
-    dy = ((distL + distR) * 0.5) * Math.cos(theta); // compute Y component of vehicle displacement
+    dx = ((distL + distR) * 0.5) * Math.sin(dtheta + (theta * Math.PI / 180)); // compute X component
+    dy = ((distL + distR) * 0.5) * Math.cos(dtheta + (theta * Math.PI / 180)); // compute Y component 
 
     // Set deltas like this
     deltas[0] = dx;
@@ -147,11 +147,12 @@ public class Odometer implements Runnable {
     isResetting = true;
     try {
       x += deltaPosition[0]; 
+//    setX(x + deltaPosition[0]);
       // TODO Update y and theta. Remember to keep theta within 360 degrees
       y += deltaPosition[1];  
-
+//    setY(y + deltaPosition[1]);
       theta += (deltaPosition[2] % 360.0);
-      
+//    setTheta(theta + (deltaPosition[2] % 360.0));
       isResetting = false;
       doneResetting.signalAll(); // Let the other threads know we are done resetting
     } finally {

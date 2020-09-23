@@ -87,8 +87,8 @@ public class SquareDriver {
     // double distanceToCover = (BASE_WIDTH / 2) * angle; // not needed
     // int totalWheelRotations = convertDistance(distanceToCover); // this code doesn't work
     // totalRotations or omegaW is the number of
-    int totalWheelRotations = (int) (angle * ((BASE_WIDTH / 2) / WHEEL_RAD));
-//  int totalWheelRotations = convertDistance(Math.PI * BASE_WIDTH * angle / 360.0);
+//    int totalWheelRotations = (int) (angle * ((BASE_WIDTH / 2) / WHEEL_RAD));
+    int totalWheelRotations = convertDistance(Math.PI * BASE_WIDTH * angle / 360.0);
 
     // degrees total our wheel has to rotate to cover a distance of distanceToCover
     return totalWheelRotations;

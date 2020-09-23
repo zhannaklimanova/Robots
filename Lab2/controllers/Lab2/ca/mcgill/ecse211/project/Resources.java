@@ -16,16 +16,16 @@ public class Resources {
   // TODO Adjust the following parameters based on your robot
 
   /** The wheel radius in meters. */
-  public static final double WHEEL_RAD = 0.021; // 2.7 cm in ferrie code
+  public static final double WHEEL_RAD = 0.021; // 2.1 cm actual
 
   /** The robot width in meters. */
-  public static final double BASE_WIDTH = 0.1554; // 16.0 cm WB in ferrie code
+  public static final double BASE_WIDTH = 0.16; // 15.54 cm actual
 
   /** The speed at which the robot moves forward in degrees per second. */
   public static final int FORWARD_SPEED = 500; // in ferrie code its FWDSPEED = 180
 
   /** The speed at which the robot rotates in degrees per second. */
-  public static final int ROTATE_SPEED = 100; // in ferrie code its TRNSPEED = 90
+  public static final int ROTATE_SPEED = 250; // in ferrie code its TRNSPEED = 90
 
   /** The motor acceleration in degrees per second squared. */
   public static final int ACCELERATION = 3000; //
