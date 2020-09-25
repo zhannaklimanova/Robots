@@ -1,9 +1,8 @@
 package ca.mcgill.ecse211.project;
 
-import static ca.mcgill.ecse211.project.Resources.*;
-import static simlejos.ExecutionController.*;
-
-import java.lang.Thread;
+import static ca.mcgill.ecse211.project.Resources.odometer;
+import static simlejos.ExecutionController.performPhysicsStep;
+import static simlejos.ExecutionController.setNumberOfParties;
 
 
 /**
@@ -29,7 +28,7 @@ public class Main {
     // We are going to start two threads, so the total number of parties is 3
     setNumberOfParties(NUMBER_OF_THREADS);
     
-    // TODO Start the odometer thread (1 line) 
+    // Starts the odometer thread (1 line) 
     new Thread(odometer).start();
     // Start the square driver, which internally starts a thread
     SquareDriver.drive();
