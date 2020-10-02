@@ -34,7 +34,7 @@ public class Main {
 
     // TODO
     // Starts the UltrasonicLocaliser localizer, which internally starts a thread
-//    UltrasonicLocalizer.localize();
+    UltrasonicLocalizer.localize();
 
     pause();
 

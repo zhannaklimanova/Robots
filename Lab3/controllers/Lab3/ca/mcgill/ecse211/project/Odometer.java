@@ -95,6 +95,9 @@ public class Odometer implements Runnable {
       currTacho[RIGHT] = rightMotor.getTachoCount();
 
       updateDeltaPosition(prevTacho, currTacho, theta, deltaPosition);
+      System.out.println("Odometer:\tx=" + String.format("% 02.2f", x)
+      + "m\ty=" + String.format("% 02.2f", y)
+      + "m\ttheta=" + String.format("%06.2f", theta) + " degrees"); 
       updateOdometerValues();
       waitUntilNextStep();
     }
