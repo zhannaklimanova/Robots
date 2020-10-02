@@ -17,7 +17,7 @@ import static simlejos.ExecutionController.sleepFor;
 public class SquareDriver {
 
   /** The length of the size of the square in tiles. Ranges from 3 to 6 (inclusive) */
-  public static final int SQUARE_LENGTH = 5; 
+  public static final int SQUARE_LENGTH = 14; 
 
   /**
    * Drives the robot in a square of SQUARE_LENGTH. It is to be run in parallel with the odometer
